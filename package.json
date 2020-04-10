@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "untools",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Collection of tools for better thinking",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adam Amran @amrancz",
   "dependencies": {
     "@kentico/gatsby-source-kontent": "^4.4.0",
     "gatsby": "^2.20.12",
