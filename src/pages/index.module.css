@@ -12,7 +12,6 @@
     text-transform: uppercase;
     font-weight: bold;
     margin: 1rem;
-    border: 0.2rem solid;
     cursor: pointer;
     outline: none;
     border-radius: 1.4rem;
@@ -20,15 +19,8 @@
     transition-duration: 0.2s;
 }
 
-.button:hover {
-    background-color: var(--darkGrey);
-    color: white;
-}
-
 .button:disabled {
-    background-color: var(--darkGrey);
-    color: white;
-    cursor: none;
+    cursor: initial;
 }
 
 .container {
@@ -39,6 +31,7 @@
     max-width: 960px;
     padding: 0 1.0875rem 1.45rem;
     margin-top: -6rem;
+    margin-bottom: 4rem;
 }
 
 .item {
@@ -54,6 +47,10 @@
 .item:hover {
     box-shadow: 0rem 0.3rem 2rem rgba(0, 0, 0, 0.24);
     color: black;
+}
+
+.item span {
+    pointer-events:none;
 }
 
 .tag {

@@ -32,7 +32,7 @@ const IndexPage = ({data}) => {
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-          <button className={style.button} disabled>All</button>
+          <button className={`${style.button} all`} disabled>All</button>
           {categories}
         </div>
       </div>

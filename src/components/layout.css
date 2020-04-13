@@ -20,6 +20,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
 }
 
 a:hover {
@@ -44,8 +45,26 @@ h3 {
 }
 
 /* Define tags and their colorurs */
+
+.all {
+  border-color: var(--darkGrey);
+  border-width: 0.2rem;
+  color: var(--darkGrey);
+}
+
+.all:hover {
+  background-color: var(--darkGrey);
+  color: white;
+}
+
+.all:disabled {
+  background-color: var(--darkGrey);
+  color: white;
+}
+
 .systems-thinking {
   border-color: var(--purple);
+  border-width: 0.2rem;
   color: var(--purple);
 }
 
@@ -61,7 +80,8 @@ h3 {
 
 .problem-solving {
   border-color: var(--green);
-  color: var(--purple);
+  border-width: 0.2rem;
+  color: var(--green);
 }
 
 .problem-solving:hover {
@@ -76,7 +96,8 @@ h3 {
 
 .decision-making {
   border-color: var(--blue);
-  color: var(--purple);
+  border-width: 0.2rem;
+  color: var(--blue);
 }
 
 .decision-making:hover {
