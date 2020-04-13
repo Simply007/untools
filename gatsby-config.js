@@ -38,6 +38,16 @@ module.exports = {
           ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Inter'],
+          urls: ['https://rsms.me/inter/inter.css']
+
+        }
+      }
+    }
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

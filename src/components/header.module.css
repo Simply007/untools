@@ -1,0 +1,19 @@
+.header {
+    background-color: hsla(204, 4%, 36%, 0.05);
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.about a {
+    float: right;
+    text-decoration: underline;
+}

@@ -2,12 +2,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
+import style from "./index.module.css"
 
 const IndexPage = ({data}) => {
   const items = data.allKontentItemArticle.edges.map(({node}) => {
     return (
       <Link to={`/${node.elements.url_slug.value}`} key={node.id}>
-          <div style={{width: `12rem`, margin: `auto`, maxWidth: `20rem`, backgroundColor: `#cccccc` }}>
+          <div className={style.item}>
               <img src={`${node.elements.icon.value[0].url}`} alt=""></img>
               <h3>{node.elements.name.value}</h3>
               <div>{node.elements.category.value[0].name.toUpperCase()}</div>
@@ -19,23 +20,21 @@ const IndexPage = ({data}) => {
 
   const categories = data.allKontentItemArticle.edges.map(({node}) => {
     return (
-      <li key={node.elements.category.value[0].name}>
-        <button href="#">{node.elements.category.value[0].name}</button>
-      </li>
+        <button className={style.button} >{node.elements.category.value[0].name}</button>
     )
   });
 
   return (
     <Layout>
       <SEO title="Untools" />
-      <h2>Tools for better thinking</h2>
-      <ul style={{ listStyle: `none`, float: `none` }}>
-        <li><button href="#">All</button></li>
-        {categories}
-      </ul>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <div className={style.top}>
+        <h1>Tools for better thinking</h1>
+        <div>
+          <button className={style.button} disabled>All</button>
+          {categories}
+        </div>
       </div>
-      <div>
+      <div className={style.container}>
         {items}
       </div>
     </Layout>
