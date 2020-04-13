@@ -13,7 +13,7 @@ import Header from "./header"
 import "./layout.css"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, displayValue }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} displayValue={displayValue} />
       <div>
         <main>{children}</main>
       </div>

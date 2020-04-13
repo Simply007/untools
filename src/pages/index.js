@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import style from "./index.module.css"
 import GalleryItem from "../components/gallery-item"
+import Header from "../components/header"
 
 const IndexPage = ({data}) => {
   const items = data.allKontentItemArticle.edges.map(({node}) => {
@@ -20,7 +21,8 @@ const IndexPage = ({data}) => {
   });
 
   return (
-    <Layout>
+    <>
+    <Layout displayValue="none">
       <SEO title="Untools" />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
@@ -33,6 +35,7 @@ const IndexPage = ({data}) => {
         {items}
       </div>
     </Layout>
+    </>
   )
 } 
 

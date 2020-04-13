@@ -27,3 +27,8 @@
     line-height: 2.4rem;
     margin-top: 2.4rem;
 }
+
+.item h2 {
+    margin-block-start: 1.2rem;
+    margin-block-end: 2.4rem;
+}

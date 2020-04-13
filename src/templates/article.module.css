@@ -1,7 +1,8 @@
 .container {
     margin: 0 auto;
-    max-width: 96rem;
+    max-width: 76rem;
     padding: 4rem;
+    margin-block-start: -12rem;
 }
 
 .similar-container {
@@ -12,7 +13,6 @@
     display: grid;
     grid-template-columns: 8rem 1fr;
     gap: 2.4rem;
-    min-width: 100%;
     padding: 3.2rem;
     background: white;
     box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
@@ -24,13 +24,27 @@
     max-height: 8rem;
 }
 
-.content {
-    margin: 0 auto;
-    max-width: 80rem;
-    padding: 4rem;
+.top span {
+    pointer-events:none;
 }
 
 .when-useful {
     font-size: 2.1rem;
-    margin-top: 1.6rem;
+    margin-block-start: 3.2rem;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 4rem 8rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+.content a:hover {
+    text-decoration: none;
 }

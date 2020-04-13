@@ -11,7 +11,7 @@ const Article = ({ data }) => {
 
     const sources = item.sources.linked_items.map(item => {
         return (
-            <div><a href={`${item.elements.url_link.value}`}>{item.elements.name.value}</a></div>
+            <div><a href={`${item.elements.url_link.value}`} target={`blank`}>{item.elements.name.value}</a></div>
         )
     });
 
@@ -23,28 +23,29 @@ const Article = ({ data }) => {
 
     return (
         <Layout>
-            <div className={style.container}>
-              <div className={style.top}>
-                  <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>
-                  <div style={{margin: `0.5rem`}}>
-                      <h2>{item.name.value}</h2>
-                      <Tag categoryStyle={categoryTag} category={item.category.value[0].name.toUpperCase()}></Tag>
-                      <div className={style.whenUseful}>{item.when_useful.value}</div>
-                  </div>
-              </div>
-              <div className={style.content}>
-                <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
+          <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`}}></div>
+          <div className={style.container}>
+            <div className={style.top}>
+                <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>
+                <div style={{margin: `0.5rem`}}>
+                    <h2>{item.name.value}</h2>
+                    <Tag categoryStyle={categoryTag} category={item.category.value[0].name.toUpperCase()}></Tag>
+                    <div className={style.whenUseful}>{item.when_useful.value}</div>
                 </div>
-                <div>
-                    <h3>Sources</h3>
-                    {sources}
-                </div>
+            </div>
+            <div className={style.content}>
+              <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
               </div>
-              <div className={style.similarContainer}>
-                  <h2>Similar tools</h2>
-                  {similarItems}
+              <div>
+                  <h3>Sources</h3>
+                  {sources}
               </div>
             </div>
+            <div className={style.similarContainer}>
+                <h2>Similar tools</h2>
+                {similarItems}
+            </div>
+          </div>
         </Layout>
     )
 }

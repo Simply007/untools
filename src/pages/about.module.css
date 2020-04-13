@@ -1,7 +1,8 @@
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 76rem;
     padding: 4rem;
+    line-height: 2.4rem;
 }
 
 .container a {
