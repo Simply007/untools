@@ -4,22 +4,30 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import style from "./index.module.css"
 import GalleryItem from "../components/gallery-item"
-import Header from "../components/header"
 
 const IndexPage = ({data}) => {
+
   const items = data.allKontentItemArticle.edges.map(({node}) => {
     return (
-      <GalleryItem data={node}></GalleryItem>
+      <GalleryItem data={node} key={node.id}></GalleryItem>
     )
   });
 
-  const categories = data.allKontentItemArticle.edges.map(({node}) => {
+  const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
     let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-        <button className={`${style.button} ${categoryTag}`} key={node.id}>{node.elements.category.value[0].name}</button>
+        <button className={`${style.button} ${categoryTag}`} key={node.elements.category.value[0].name}>{node.elements.category.value[0].name}</button>
     )
   });
 
+  const categories = categoriesRaw.filter((elem, index) => {
+    return categoriesRaw.findIndex((x) => {
+      return x.key === elem.key;
+    }) === index;
+  });
+  
+  console.log(categories);
+  
   return (
     <>
     <Layout displayValue="none">
@@ -69,16 +77,6 @@ export const query = graphql`
           when_useful {
             value
           }
-        }
-        id
-      }
-    }
-  }
-  allKontentTaxonomyCategory {
-    edges {
-      node {
-        terms {
-          name
         }
         id
       }
