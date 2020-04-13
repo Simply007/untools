@@ -1,21 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import style from "./index.module.css"
+import GalleryItem from "../components/gallery-item"
 
 const IndexPage = ({data}) => {
   const items = data.allKontentItemArticle.edges.map(({node}) => {
-    let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-      <Link to={`/${node.elements.url_slug.value}`} key={node.id} className={style.item}>
-          <div>
-              <img src={`${node.elements.icon.value[0].url}`} alt=""></img>
-              <h2>{node.elements.name.value}</h2>
-              <span className={`${style.tag} ${categoryTag}`}>{node.elements.category.value[0].name.toUpperCase()}</span>
-              <p>{node.elements.when_useful.value}</p>
-          </div>
-      </Link>
+      <GalleryItem data={node}></GalleryItem>
     )
   });
 

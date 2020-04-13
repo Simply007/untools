@@ -5,13 +5,7 @@ import style from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
   <header className={style.header}>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+    <div className={style.container}>
       <span className={style.logo}>
         <Link to="/" >
           {siteTitle.toLowerCase()}

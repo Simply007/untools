@@ -1,0 +1,17 @@
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 4rem;
+}
+
+.container a {
+    text-decoration: underline;
+}
+
+.container a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}

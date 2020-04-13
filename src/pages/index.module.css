@@ -28,48 +28,8 @@
     grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
     gap: 2.4rem;
     margin: 0 auto;
-    max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
+    max-width: 96rem;
+    padding: 0 1rem 1.6rem;
     margin-top: -6rem;
     margin-bottom: 4rem;
-}
-
-.item {
-    display: block;
-    width: 26rem;
-    padding: 2.4rem;
-    background: white;
-    box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
-    border-radius: 2rem;
-    transition-duration: 0.2s;
-}
-
-.item:hover {
-    box-shadow: 0rem 0.3rem 2rem rgba(0, 0, 0, 0.24);
-    color: black;
-}
-
-.item span {
-    pointer-events:none;
-}
-
-.tag {
-    padding: 0.6rem 1rem 0.6rem 1rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 0.2rem solid;
-    border-radius: 1.2rem;
-    background-color: none;
-}
-
-.item img {
-    max-width: 8rem;
-    max-height: 8rem;
-}
-
-.item p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    margin-top: 2.4rem;
 }

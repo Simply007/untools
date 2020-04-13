@@ -1,0 +1,9 @@
+.tag {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0.2rem solid;
+    border-radius: 1.2rem;
+    background-color: none;
+}

@@ -1,10 +1,13 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { graphql } from "gatsby"
+import style from "./article.module.css"
 import Layout from "../components/layout"
+import Tag from "../components/tag"
+import GalleryItem from "../components/gallery-item"
 
 const Article = ({ data }) => {
     const item = data.kontentItemArticle.elements;
+    let categoryTag = item.category.value[0].name.toLowerCase().split(' ').join('-');
 
     const sources = item.sources.linked_items.map(item => {
         return (
@@ -14,36 +17,33 @@ const Article = ({ data }) => {
 
     const similarItems = data.kontentItemArticle.elements.similar_tools.linked_items.map(item => {
         return (
-          <Link to={`/${item.elements.url_slug.value}`} key={item.id}>
-              <div style={{width: `12rem`, margin: `auto`, maxWidth: `20rem`, backgroundColor: `#cccccc` }}>
-                  <img src={`${item.elements.icon.value[0].url}`} alt=""></img>
-                  <h3>{item.elements.name.value}</h3>
-                  <div>{item.elements.category.value[0].name.toUpperCase()}</div>
-                  <span>{item.elements.when_useful.value}</span>
-              </div>
-          </Link>
+          <GalleryItem data={item}></GalleryItem>
         )
     });
 
     return (
         <Layout>
-            <div style={{margin: `2rem`, backgroundColor:`#eee`}}>
-                <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>
-                <div style={{margin: `0.5rem`}}>
-                    <h2>{item.name.value}</h2>
-                    <div>{item.category.value[0].name.toUpperCase()}</div>
-                    <div>{item.when_useful.value}</div>
+            <div className={style.container}>
+              <div className={style.top}>
+                  <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>
+                  <div style={{margin: `0.5rem`}}>
+                      <h2>{item.name.value}</h2>
+                      <Tag categoryStyle={categoryTag} category={item.category.value[0].name.toUpperCase()}></Tag>
+                      <div className={style.whenUseful}>{item.when_useful.value}</div>
+                  </div>
+              </div>
+              <div className={style.content}>
+                <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
                 </div>
-            </div>
-            <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
-            </div>
-            <div>
-                <h3>Sources</h3>
-                {sources}
-            </div>
-            <div>
-                <h2>Similar tools</h2>
-                {similarItems}
+                <div>
+                    <h3>Sources</h3>
+                    {sources}
+                </div>
+              </div>
+              <div className={style.similarContainer}>
+                  <h2>Similar tools</h2>
+                  {similarItems}
+              </div>
             </div>
         </Layout>
     )

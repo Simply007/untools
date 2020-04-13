@@ -1,0 +1,29 @@
+.item {
+    min-width: 26rem;
+    max-width: 40rem;
+    padding: 2.4rem;
+    background: white;
+    box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    transition-duration: 0.2s;
+}
+
+.item:hover {
+    box-shadow: 0rem 0.3rem 2rem rgba(0, 0, 0, 0.24);
+    color: black;
+}
+
+.item span {
+    pointer-events:none;
+}
+
+.item img {
+    max-width: 8rem;
+    max-height: 8rem;
+}
+
+.item p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 2.4rem;
+}
