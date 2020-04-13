@@ -6,21 +6,23 @@ import style from "./index.module.css"
 
 const IndexPage = ({data}) => {
   const items = data.allKontentItemArticle.edges.map(({node}) => {
+    let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-      <Link to={`/${node.elements.url_slug.value}`} key={node.id}>
-          <div className={style.item}>
+      <Link to={`/${node.elements.url_slug.value}`} key={node.id} className={style.item}>
+          <div>
               <img src={`${node.elements.icon.value[0].url}`} alt=""></img>
-              <h3>{node.elements.name.value}</h3>
-              <div>{node.elements.category.value[0].name.toUpperCase()}</div>
-              <span>{node.elements.when_useful.value}</span>
+              <h2>{node.elements.name.value}</h2>
+              <span className={`${style.tag} ${categoryTag}`}>{node.elements.category.value[0].name.toUpperCase()}</span>
+              <p>{node.elements.when_useful.value}</p>
           </div>
       </Link>
     )
   });
 
   const categories = data.allKontentItemArticle.edges.map(({node}) => {
+    let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-        <button className={style.button} >{node.elements.category.value[0].name}</button>
+        <button className={`${style.button} ${categoryTag}`} key={node.id}>{node.elements.category.value[0].name}</button>
     )
   });
 
