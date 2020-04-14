@@ -1,5 +1,6 @@
 :root {
   --transparentGrey:  hsla(204, 4%, 36%, 0.05);
+  --darkerOverlay:  hsla(204, 4%, 36%, 0.15);
   --creamWhite: #FAF7F4;
   --darkGrey: #323537;
   --purple: #9B51E0;

@@ -1,0 +1,81 @@
+.share {
+    max-width: 100%;
+    padding: 1.6rem 1.6rem;
+    max-height: 6rem;
+    background: white;
+    box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    line-height: 6rem;
+}
+
+.share span {
+    font-size: 2.4rem;
+    font-weight: 900;
+    flex-basis: 80%;
+    align-self: flex-start;
+    margin-left: 0.8rem;
+}
+
+.share button {
+    align-self: flex-end;
+    max-width: 4.8rem;
+    max-height: 4.8rem;
+    padding: 1.2rem;
+    margin: 0.8rem;
+    background-color: none;
+    outline: none;
+    border: none;
+    border-radius: 1.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.share button:hover {
+    background-color: var(--transparentGrey);
+    cursor: pointer;
+}
+
+.share button:active {
+    background-color: var(--darkerOverlay);
+}
+
+.tooltip {
+    background-color: var(--darkGrey);
+    visibility: hidden;
+    position: absolute;
+    color: white;
+    padding: 1.6rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    min-width: 8rem;
+    z-index: 1;
+    margin-left: -90%;
+    bottom: 100%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    line-height: 2rem;
+}
+
+.share button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.8rem;
+    border-width: 0.8rem;
+    border-style: solid;
+    border-color: var(--darkGrey) transparent transparent transparent;
+}
+

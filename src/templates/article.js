@@ -4,6 +4,7 @@ import style from "./article.module.css"
 import Layout from "../components/layout"
 import Tag from "../components/tag"
 import GalleryItem from "../components/gallery-item"
+import Share from "../components/share"
 
 const Article = ({ data }) => {
     const item = data.kontentItemArticle.elements;
@@ -41,6 +42,7 @@ const Article = ({ data }) => {
                   {sources}
               </div>
             </div>
+            <Share></Share>
             <div className={style.similarContainer}>
                 <h2>Similar tools</h2>
                 {similarItems}
