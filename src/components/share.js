@@ -42,7 +42,7 @@ class Share extends React.Component {
 
     componentDidMount() {
         this.setState({
-            url: {window.location.href},
+            url: `${window.location.href}`,
     })
 }
 
