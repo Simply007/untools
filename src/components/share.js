@@ -36,13 +36,13 @@ class Share extends React.Component {
 
     resetText(){
         this.setState({
-            tooltipText: 'Copy link'
+            tooltipText: 'Copy link',
         })
     }
 
     componentDidMount() {
         this.setState({
-            url: window.location.href
+            url: {window.location.href},
     })
 }
 
