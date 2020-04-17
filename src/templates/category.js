@@ -2,11 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import style from "./index.module.css"
+import style from "./category.module.css"
 import GalleryItem from "../components/gallery-item"
-import Categories from "../components/categoryTag"
 
-const IndexPage = ({data}) => {
+const Category = ({data}) => {
 
   const items = data.allKontentItemArticle.edges.map(({node}) => {
     return (
@@ -17,10 +16,7 @@ const IndexPage = ({data}) => {
   const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
     let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-      <>
-        <categoryTag node={node} categoryTag={categoryTag} />
         <button className={`${style.button} ${categoryTag}`} key={node.elements.category.value[0].name}>{node.elements.category.value[0].name}</button>
-      </>
     )
   });
 
@@ -29,7 +25,8 @@ const IndexPage = ({data}) => {
       return x.key === elem.key;
     }) === index;
   });
-    
+  
+  
   return (
     <>
     <Layout displayValue="none">
@@ -38,7 +35,6 @@ const IndexPage = ({data}) => {
         <h1>Tools for better thinking</h1>
         <div>
           <button className={`${style.button} all`} disabled>All</button>
-          <Categories data={data}></Categories>
           {categories}
         </div>
       </div>
@@ -50,7 +46,7 @@ const IndexPage = ({data}) => {
   )
 } 
 
-export default IndexPage
+export default Category
 
 export const query = graphql`
 {

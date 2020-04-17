@@ -33,12 +33,17 @@
     margin-block-start: 3.2rem;
 }
 
+.sources {
+    margin-top: 4rem;
+}
+
 .content {
     margin: 0 auto;
     max-width: 80rem;
     padding: 4rem 8rem;
     font-size: 1.8rem;
     line-height: 2.8rem;
+    margin-bottom: 1.6rem;
 }
 
 .content a {

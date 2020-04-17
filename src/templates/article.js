@@ -37,7 +37,7 @@ const Article = ({ data }) => {
             <div className={style.content}>
               <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
               </div>
-              <div>
+              <div className={style.sources}>
                   <h3>Sources</h3>
                   {sources}
               </div>

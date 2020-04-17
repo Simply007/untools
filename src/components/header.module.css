@@ -22,9 +22,14 @@ a {
 
 .back-link {
     padding: 0.6rem 0rem;
-    text-decoration: underline;
     text-align: center;
 }
+
+.back-link a {
+    text-decoration: underline;
+}
+
+
 
 .about a {
     padding: 0.6rem 0rem;
