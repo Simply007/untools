@@ -22,6 +22,7 @@ class Share extends React.Component {
         super(props);
         this.state = {
             tooltipText: 'Copy link',
+            url: '',
         };
         this.changeText = this.changeText.bind(this);
         this.resetText = this.resetText.bind(this)
@@ -35,15 +36,18 @@ class Share extends React.Component {
 
     resetText(){
         this.setState({
-            tooltipText: 'Copy link!'
+            tooltipText: 'Copy link'
         })
     }
 
     componentDidMount() {
-        this.url = window.location.href
-    }
+        this.setState({
+            url: window.location.href
+    })
+}
 
     render() {
+        console.log(this.url)
         return (
         <div className={style.share}>
             <span>Share this tool:</span>
@@ -54,7 +58,7 @@ class Share extends React.Component {
 }
 
 Share.defaultProps = {
-    title: 'A tool',
+    title: '',
     category: 'thinking'
 }
   
