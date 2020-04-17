@@ -50,8 +50,8 @@ class Share extends React.Component {
         return (
         <div className={style.share}>
             <span>Share this tool:</span>
-            <CopyToClipboard text={this.props.url}><button onMouseEnter={this.resetText} onClick={this.changeText}><IconContext.Provider value={{ color: "var(--darkGrey)", className: "global-class-name", size: "2.4rem" }}><FiCopy /></IconContext.Provider><Tooltip tooltipText={this.state.tooltipText}></Tooltip></button></CopyToClipboard>
-            <button><a className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${this.props.title}:%20a%20tool%20for%20better%20${this.props.category}%20${this.props.url}`} target="_blank" rel="noopener noreferrer"><IconContext.Provider value={{ color: "#1DA1F2", className: "global-class-name", size: "2.4rem" }}><FiTwitter /></IconContext.Provider></a><p className={style.tooltip}>Share on Twitter</p></button>
+            <CopyToClipboard text={this.state.url}><button onMouseEnter={this.resetText} onClick={this.changeText}><IconContext.Provider value={{ color: "var(--darkGrey)", className: "global-class-name", size: "2.4rem" }}><FiCopy /></IconContext.Provider><Tooltip tooltipText={this.state.tooltipText}></Tooltip></button></CopyToClipboard>
+            <button><a className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${this.props.title}:%20a%20tool%20for%20better%20${this.props.category}%20${this.state.url}`} target="_blank" rel="noopener noreferrer"><IconContext.Provider value={{ color: "#1DA1F2", className: "global-class-name", size: "2.4rem" }}><FiTwitter /></IconContext.Provider></a><p className={style.tooltip}>Share on Twitter</p></button>
         </div>
     )}
 }
