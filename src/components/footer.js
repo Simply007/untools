@@ -5,7 +5,7 @@ const Footer = () => (
     <footer className={style.footer}>
         © {new Date().getFullYear()}, Made by
         {` `}
-        <a href="https://www.amran.cz" target="blank">Adam Amran</a>
+        <a href="https://www.amran.cz" target="blank" rel={`noopener noreferrer`}>Adam Amran</a>
     </footer>
   )
 

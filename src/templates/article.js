@@ -12,13 +12,13 @@ const Article = ({ data }) => {
 
     const sources = item.sources.linked_items.map(item => {
         return (
-            <div><a href={`${item.elements.url_link.value}`} target={`blank`}>{item.elements.name.value}</a></div>
+            <div key={item.id}><a href={`${item.elements.url_link.value}`} target={`blank`} rel={`noopener noreferrer`}>{item.elements.name.value}</a></div>
         )
     });
 
     const similarItems = data.kontentItemArticle.elements.similar_tools.linked_items.map(item => {
         return (
-          <GalleryItem data={item}></GalleryItem>
+          <GalleryItem key={item.id} data={item}></GalleryItem>
         )
     });
 
@@ -42,7 +42,7 @@ const Article = ({ data }) => {
                   {sources}
               </div>
             </div>
-            <Share></Share>
+            <Share title={item.name.value} category={item.category.value[0].name.toLowerCase()} ></Share>
             <div className={style.similarContainer}>
                 <h2>Similar tools</h2>
                 {similarItems}
