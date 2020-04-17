@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import style from "./index.module.css"
 import GalleryItem from "../components/gallery-item"
-import Categories from "../components/categoryTag"
+import CategoryTag from "../components/categoryTag"
 
 const IndexPage = ({data}) => {
 
@@ -15,13 +15,9 @@ const IndexPage = ({data}) => {
   });
 
   const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
-    let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
     return (
-      <>
-        <categoryTag node={node} categoryTag={categoryTag} />
-        <button className={`${style.button} ${categoryTag}`} key={node.elements.category.value[0].name}>{node.elements.category.value[0].name}</button>
-      </>
-    )
+        <CategoryTag key={node.elements.category.value[0].name} name={node.elements.category.value[0].name}/>
+      )
   });
 
   const categories = categoriesRaw.filter((elem, index) => {
@@ -37,8 +33,7 @@ const IndexPage = ({data}) => {
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-          <button className={`${style.button} all`} disabled>All</button>
-          <Categories data={data}></Categories>
+          <CategoryTag name='All'></CategoryTag>
           {categories}
         </div>
       </div>

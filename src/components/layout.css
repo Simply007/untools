@@ -102,7 +102,7 @@ h3 {
   color: var(--blue);
 }
 
-.decision-making:hover {
+.decision-making:hover{
   background-color: var(--blue);
   color: white;
 }
