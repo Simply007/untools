@@ -13,18 +13,6 @@ const IndexPage = ({data}) => {
       <GalleryItem data={node} key={node.id}></GalleryItem>
     )
   });
-/*
-  const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
-    return (
-        <CategoryTag key={node.elements.category.value[0].name} name={node.elements.category.value[0].name}/>
-      )
-  });
-
-  const categories = categoriesRaw.filter((elem, index) => {
-    return categoriesRaw.findIndex((x) => {
-      return x.key === elem.key;
-    }) === index;
-  }); */
     
   return (
     <>
@@ -33,7 +21,7 @@ const IndexPage = ({data}) => {
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-          <Categories data={data}></Categories>
+          <Categories data={data} selected={'All'}></Categories>
         </div>
       </div>
       <div className={style.container}>
