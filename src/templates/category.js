@@ -9,13 +9,21 @@ import Categories from "../components/categories"
 
 const Category = ({data, pageContext}) => { 
 
+  function orderItems(a, b) {
+    const first = a.props.data.system.lastModified;
+    const second = b.props.data.system.lastModified;
+    return first > second ? -1 : (first < second ? 1 : 0)
+  }
+
   const items = data.allKontentItemArticle.edges.map(({node}) => {
-   if (node.elements.category.value[0].name === pageContext.category){
+    if (node.elements.category.value[0].name === pageContext.category) {
       return (
         <GalleryItem data={node} key={node.id}></GalleryItem>
       )
-   }
-  });
+    }
+  }).sort(orderItems);
+
+
   
   return (
     <>
@@ -67,6 +75,9 @@ export const query = graphql`
           }
         }
         id
+        system {
+          lastModified
+        }
       }
     }
   }

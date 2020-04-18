@@ -3,8 +3,6 @@ import style from "./categories.module.css"
 import { Link } from "gatsby"
 
 const CategoryTag = ({name, disable}) => {
-
-    console.log(`the state of disabled for ${name} is ${disable}`)
     if (name === 'All'){
         return (
             <Link to={`/`}><button className={`${style.button} ${name.toLowerCase().split(' ').join('-')}`} disabled={disable}>{name}</button></Link>
@@ -16,8 +14,6 @@ const CategoryTag = ({name, disable}) => {
 }
 
 const Categories = ({data, selected}) => {
-    console.log(selected)
-
     const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
         if (node.elements.category.value[0].name === selected) {
             return (

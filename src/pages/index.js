@@ -8,11 +8,19 @@ import Categories from "../components/categories"
 
 const IndexPage = ({data}) => {
 
+  function orderItems(a, b) {
+    const first = a.props.data.system.lastModified;
+    const second = b.props.data.system.lastModified;
+    return first > second ? -1 : (first < second ? 1 : 0)
+  }
+
   const items = data.allKontentItemArticle.edges.map(({node}) => {
     return (
       <GalleryItem data={node} key={node.id}></GalleryItem>
     )
-  });
+  }).sort(orderItems);
+
+  // console.log(items)
     
   return (
     <>
@@ -64,6 +72,9 @@ export const query = graphql`
           }
         }
         id
+        system {
+          lastModified
+        }
       }
     }
   }
