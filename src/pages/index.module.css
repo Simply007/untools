@@ -6,23 +6,6 @@
     text-align: center;
 }
 
-.button {
-    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 1rem;
-    cursor: pointer;
-    outline: none;
-    border-radius: 1.4rem;
-    background-color: none;
-    transition-duration: 0.2s;
-}
-
-.button:disabled {
-    cursor: initial;
-}
-
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));

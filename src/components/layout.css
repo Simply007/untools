@@ -68,7 +68,9 @@ h3 {
   border-color: var(--purple);
   border-width: 0.2rem;
   color: var(--purple);
+
 }
+
 
 .systems-thinking:hover {
   background-color: var(--purple);

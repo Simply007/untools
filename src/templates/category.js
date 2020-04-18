@@ -4,38 +4,27 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import style from "./category.module.css"
 import GalleryItem from "../components/gallery-item"
+import Categories from "../components/categories"
 
-const Category = ({data}) => {
+
+const Category = ({data, pageContext}) => { 
 
   const items = data.allKontentItemArticle.edges.map(({node}) => {
-    return (
-      <GalleryItem data={node} key={node.id}></GalleryItem>
-    )
+   if (node.elements.category.value[0].name === pageContext.category){
+      return (
+        <GalleryItem data={node} key={node.id}></GalleryItem>
+      )
+   }
   });
-
-  const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
-    let categoryTag = node.elements.category.value[0].name.toLowerCase().split(' ').join('-');
-    return (
-        <button className={`${style.button} ${categoryTag}`} key={node.elements.category.value[0].name}>{node.elements.category.value[0].name}</button>
-    )
-  });
-
-  const categories = categoriesRaw.filter((elem, index) => {
-    return categoriesRaw.findIndex((x) => {
-      return x.key === elem.key;
-    }) === index;
-  });
-  
   
   return (
     <>
-    <Layout displayValue="none">
+    <Layout displayBackLink="none">
       <SEO title="Untools" />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-          <button className={`${style.button} all`} disabled>All</button>
-          {categories}
+        <Categories data={data} ></Categories>
         </div>
       </div>
       <div className={style.container}>

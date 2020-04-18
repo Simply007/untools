@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import style from "./index.module.css"
 import GalleryItem from "../components/gallery-item"
-import CategoryTag from "../components/categoryTag"
+import Categories from "../components/categories"
 
 const IndexPage = ({data}) => {
 
@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
       <GalleryItem data={node} key={node.id}></GalleryItem>
     )
   });
-
+/*
   const categoriesRaw = data.allKontentItemArticle.edges.map(({node}) => {
     return (
         <CategoryTag key={node.elements.category.value[0].name} name={node.elements.category.value[0].name}/>
@@ -24,7 +24,7 @@ const IndexPage = ({data}) => {
     return categoriesRaw.findIndex((x) => {
       return x.key === elem.key;
     }) === index;
-  });
+  }); */
     
   return (
     <>
@@ -33,8 +33,7 @@ const IndexPage = ({data}) => {
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-          <CategoryTag name='All'></CategoryTag>
-          {categories}
+          <Categories data={data}></Categories>
         </div>
       </div>
       <div className={style.container}>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import style from "./header.module.css"
 
-const Header = ({ siteTitle, displayValue }) => (
+const Header = ({ siteTitle, displayBackLink }) => (
   <header className={style.header}>
     <div className={style.container}>
       <span className={style.logo}>
@@ -11,7 +11,7 @@ const Header = ({ siteTitle, displayValue }) => (
           {siteTitle.toLowerCase()}
         </Link>
       </span>
-      <span className={style.backLink}><Link to="/" style={{display: `${displayValue}`}}>Back to all tools</Link></span>
+      <span className={style.backLink}><Link to="/" style={{display: `${displayBackLink}`}}>Back to all tools</Link></span>
       <span className={style.about}>
         <Link to="/about/">About</Link>
       </span>
@@ -21,12 +21,12 @@ const Header = ({ siteTitle, displayValue }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  displayValue: PropTypes.string,
+  displayBackLink: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
-  displayValue: `block`,
+  displayBackLink: `block`,
 }
 
 export default Header
