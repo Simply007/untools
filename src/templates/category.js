@@ -24,7 +24,7 @@ const Category = ({data, pageContext}) => {
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>
-        <Categories data={data} ></Categories>
+        <Categories data={data} selected={pageContext.category}></Categories>
         </div>
       </div>
       <div className={style.container}>
