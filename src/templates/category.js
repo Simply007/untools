@@ -28,7 +28,7 @@ const Category = ({data, pageContext}) => {
   return (
     <>
     <Layout displayBackLink="none">
-      <SEO title="Untools" />
+      <SEO title={pageContext.category} />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>

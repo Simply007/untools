@@ -25,7 +25,7 @@ const IndexPage = ({data}) => {
   return (
     <>
     <Layout displayBackLink="none">
-      <SEO title="Untools" />
+      <SEO title="Tools for better thinking" />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
         <div>

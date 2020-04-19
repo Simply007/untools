@@ -46,6 +46,12 @@
     margin-bottom: 1.6rem;
 }
 
+.content img {
+    width: 100%;
+    border: 0.2rem outset;
+    border-color: var(--transparentGrey);
+}
+
 .content a {
     text-decoration: underline;
 }
