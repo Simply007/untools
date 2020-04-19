@@ -47,6 +47,9 @@ module.exports = {
 
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-preload-fonts',
     }
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
