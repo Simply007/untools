@@ -23,7 +23,7 @@ const Article = ({ data }) => {
     });
 
     return (
-        <Layout>
+        <Layout displayBackLink="block">
           <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`}}></div>
           <div className={style.container}>
             <div className={style.top}>
