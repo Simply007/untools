@@ -59,3 +59,36 @@
 .content a:hover {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 480px) {
+    .container {
+      padding: 2rem;
+    }
+
+    .content {
+        margin: 0 auto;
+        max-width: 80rem;
+        padding: 2.4rem 2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+
+    .top {
+        padding: 2.4rem;
+        display: grid;
+        grid-template-columns: 6rem 1fr;
+    }
+    
+    .top img {
+        max-width: 6rem;
+        max-height: 6rem;
+    }
+
+    .when-useful {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        margin-block-start: 3rem;
+    }
+}
