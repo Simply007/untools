@@ -7,10 +7,17 @@
     cursor: pointer;
     outline: none;
     border-radius: 1.4rem;
-    background-color: none;
+    background-color: transparent;
     transition-duration: 0.2s;
 }
 
 .button:disabled {
     cursor: initial;
+}
+
+@media only screen and (max-width: 480px) {
+    .button {
+        font-size: 1.2rem;
+        margin: 0.8rem;
+    }
 }

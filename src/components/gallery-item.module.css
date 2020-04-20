@@ -32,3 +32,19 @@
     margin-block-start: 1.2rem;
     margin-block-end: 2.4rem;
 }
+
+@media only screen and (max-width: 480px) {
+    .item {
+        padding: 2.4rem;
+    }
+
+    .item img {
+        max-width: 6rem;
+        max-height: 6rem;
+    }
+
+    .item h2 {
+        margin-block-start: 0.8rem;
+        margin-block-end: 2rem;
+    }
+}
