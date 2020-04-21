@@ -1,6 +1,6 @@
 .container {
     margin: 0 auto;
-    max-width: 76rem;
+    max-width: 60rem;
     padding: 4rem;
     line-height: 2.4rem;
 }
@@ -15,4 +15,21 @@
 
 h1 {
     text-align: center;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 2.4rem;
+    padding: 3.2rem;
+    background: white;
+    box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+}
+
+.top img {
+    max-width: 17rem;
+    max-height: 17rem;
 }
