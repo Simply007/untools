@@ -1,8 +1,8 @@
 :root {
   --transparentGrey:  hsla(204, 4%, 36%, 0.05);
   --darkerOverlay:  hsla(204, 4%, 36%, 0.15);
-  --creamWhite: #FAF7F4;
-  --darkGrey: #323537;
+  --creamWhite: hsla(40, 50%, 99%, 1);
+  --darkGrey: #0a171c;
   --purple: #9B51E0;
   --green: #27AE60;
   --blue: #2D9CDB;
@@ -24,13 +24,17 @@ body {
   font-size: 1.6rem;
 }
 
+a {
+  color: var(--darkGrey);
+}
+
 a:hover {
   text-decoration: none;
 }
 
 h1 {
   margin-bottom: 1rem;
-  font-size: 4.8rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 

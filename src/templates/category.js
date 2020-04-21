@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import style from "./category.module.css"
+import style from "../pages/index.module.css"
 import GalleryItem from "../components/gallery-item"
 import Categories from "../components/categories"
 
@@ -31,6 +31,7 @@ const Category = ({data, pageContext}) => {
       <SEO title={pageContext.category} />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
+        <p>Untools is a collection of tools and mental models to help you solve problems, make decisions and understand systems.</p>
         <div>
         <Categories data={data} selected={pageContext.category}></Categories>
         </div>

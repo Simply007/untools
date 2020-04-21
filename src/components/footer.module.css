@@ -1,8 +1,9 @@
 .footer {
     background-color: white;
     font-size: 1.6rem;
-    text-align: center;
-    padding: 3.6rem;
+    text-align: left;
+    padding: 6rem;
+    border-top: solid .2rem var(--transparentGrey);
 }
 
 .footer a {
@@ -11,5 +12,43 @@
 
 .footer a:hover {
     text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 4rem;
+    max-width: 96rem;
+    margin: 0 auto;
+    margin-block-end: 2rem;
+}
+
+.newsletter {
+    text-align: left;
+}
+
+.newsletter p {
+    font-size: 1.4rem;
+    opacity: .5;
+}
+
+.newsletter input {
+    line-height: 2.4rem;
+    padding: 1.2rem;
+    border-radius: .8rem;
+    border: solid .2rem var(--darkerOverlay);
+    margin-right: 1.6rem;
+}
+
+.newsletter button {
+    line-height: 2.4rem;
+    padding: 1.2rem;
+    font-weight: 900;
+    border-radius: .8rem;
+
+}
+
+.suggestions {
+    text-align: left;
 }
 

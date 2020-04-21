@@ -9,6 +9,7 @@
     border-radius: 1.4rem;
     background-color: transparent;
     transition-duration: 0.2s;
+    outline-offset: 0rem;
 }
 
 .button:disabled {

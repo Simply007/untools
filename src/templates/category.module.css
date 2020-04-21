@@ -1,26 +1,21 @@
 .top {
-    background-color: hsla(204, 4%, 36%, 0.05);
+    background-color: var(--transparentGrey);
     margin: 0;
     padding-bottom: 10rem;
     padding-top: 0.1rem;
     text-align: center;
 }
 
-.button {
-    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 1rem;
-    cursor: pointer;
-    outline: none;
-    border-radius: 1.4rem;
-    background-color: none;
-    transition-duration: 0.2s;
+.top h1 {
+    margin-block-end: 2rem;
 }
 
-.button:disabled {
-    cursor: initial;
+.top p {
+    max-width: 70rem;
+    margin: 0 auto;
+    font-size: 2.1rem;
+    line-height: 3rem;
+    margin-block-end: 2rem;
 }
 
 .container {
@@ -32,4 +27,21 @@
     padding: 0 1rem 1.6rem;
     margin-top: -6rem;
     margin-bottom: 4rem;
+}
+
+/* Responsivity */
+
+@media only screen and (max-width: 480px) {
+    .container {
+      padding: 2rem;
+    }
+}
+  
+@media only screen and (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+        gap: 2.4rem;
+        margin-top: -8rem;
+    }
 }

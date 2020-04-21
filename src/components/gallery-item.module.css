@@ -3,8 +3,8 @@
     max-width: 40rem;
     padding: 2.4rem;
     background: white;
-    box-shadow: 0rem 0.3rem 1rem rgba(0, 0, 0, 0.15);
-    border-radius: 2rem;
+    box-shadow: 0rem 0.3rem 0.8rem rgba(0, 0, 0, 0.12);
+    border-radius: 0.8rem;
     transition-duration: 0.2s;
 }
 

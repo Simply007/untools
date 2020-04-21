@@ -11,8 +11,8 @@
 }
 
 a {
-    text-decoration: none;
     color: var(--darkGrey);
+    text-decoration: none;
 }
 
 .logo {
