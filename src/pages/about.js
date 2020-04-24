@@ -3,7 +3,6 @@ import React from 'react'
 import style from "./about.module.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo" 
-import Image from "../components/image"
 
 const About = () => (
     <Layout>

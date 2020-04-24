@@ -7,7 +7,7 @@
   "dependencies": {
     "@kentico/gatsby-source-kontent": "^4.4.0",
     "feather-icons": "^4.28.0",
-    "gatsby": "^2.20.12",
+    "gatsby": "^2.20.31",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
