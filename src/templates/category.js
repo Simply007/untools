@@ -31,7 +31,7 @@ const Category = ({data, pageContext}) => {
       <SEO title={pageContext.category} />
       <div className={style.top}>
         <h1>Tools for better thinking</h1>
-        <p>Collection of frameworks and mental models to help you solve problems, make decisions and understand systems.</p>
+        <p>Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.</p>
         <div>
         <Categories data={data} selected={pageContext.category}></Categories>
         </div>
