@@ -10,8 +10,7 @@ const About = () => (
         <div className={style.container}>
             <h2>About Untools</h2>
             <p>
-                Untools is a collection of mental tools for better thinking. 
-                It spans systems thinking, problem solving and decision making.
+            Untools is a collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.
             </p>
             <div className={style.top}>
                 <div style={{margin: `0.5rem`}}>
