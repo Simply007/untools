@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding-top: 4rem;
+    line-height: 2.4rem;
+    margin-block-end: -4rem;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+}
+
+.container img {
+    display: block;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: underline;
+}
+
+.container a:hover {
+    text-decoration: none;
+}

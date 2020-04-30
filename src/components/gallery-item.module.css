@@ -36,6 +36,9 @@
 @media only screen and (max-width: 480px) {
     .item {
         padding: 2.4rem;
+        display: block;
+        min-width: none;
+        max-width: 22rem;
     }
 
     .item img {

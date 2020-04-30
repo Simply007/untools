@@ -56,6 +56,7 @@ h3 {
   border-color: var(--darkGrey);
   border-width: 0.2rem;
   color: var(--darkGrey);
+  
 }
 
 .all:hover {
@@ -334,12 +335,6 @@ select { /* 1 */
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 
 /**
  * Remove the inner border and padding in Firefox.

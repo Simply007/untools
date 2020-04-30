@@ -80,5 +80,9 @@
         display: flex;
         flex: none
     }
+
+    .block input {
+        max-width: 50%;
+    }
 }
 

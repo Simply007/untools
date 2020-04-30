@@ -20,6 +20,8 @@ const Category = ({data, pageContext}) => {
       return (
         <GalleryItem data={node} key={node.id}></GalleryItem>
       )
+    } else {
+      return console.log(`No items found`)
     }
   }).sort(orderItems);
 

@@ -7,9 +7,12 @@
     cursor: pointer;
     outline: none;
     border-radius: 1.4rem;
+    border-style: solid;
     background-color: transparent;
     transition-duration: 0.2s;
     outline-offset: 0rem;
+    -webkit-appearance: none;
+    box-shadow: none;
 }
 
 .button:disabled {
