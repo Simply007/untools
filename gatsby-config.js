@@ -42,7 +42,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['Inter'],
+          families: ['Inter:n4,n9'],
           urls: ['https://rsms.me/inter/inter.css']
 
         }
