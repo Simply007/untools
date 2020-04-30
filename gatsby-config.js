@@ -42,14 +42,16 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['Inter:n4,n9'],
+          families: ['Inter:n4,i4,n9'],
           urls: ['https://rsms.me/inter/inter.css']
-
         }
       }
     },
     {
       resolve: 'gatsby-plugin-preload-fonts',
+      options: {
+        crossOrigin: `anonymous`,
+      }
     }
     
     // this (optional) plugin enables Progressive Web App + Offline functionality
