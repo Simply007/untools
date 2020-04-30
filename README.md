@@ -1,5 +1,5 @@
 # 🧠 Untools
 
-Untools is a collection of tools for better thinking. Spanning systems thinking, problem solving and decision making.
+Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.
 
-Made by Adam Amran, @amrancz
+Coming soon!
