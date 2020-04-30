@@ -28,9 +28,11 @@
     margin-block-start: 4rem;
 }
 
-.block p {
+.block label {
     text-align: left;
+    display: block;
     line-height: 2.4rem;
+    margin-block-end: 1.6rem;
 }
 
 .block input {

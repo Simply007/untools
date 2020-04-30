@@ -22,13 +22,13 @@ class Footer extends React.Component {
       <div className={style.container}>
       <div className={style.block}>
         <h3><span role="img" aria-label="mailbox">📫 </span>New tools in your inbox</h3>
-        <p>You'll get new tools as soon as they're published and occasional project updates.</p>
         <form
           action="https://buttondown.email/api/emails/embed-subscribe/untools.co"
           method="post"
           target="popupwindow"
           onSubmit={`${this.state.url}.open('https://buttondown.email/untools.co', 'popupwindow')`}
           className="embeddable-buttondown-form" >
+          <label for="bd-email">You'll get new tools as soon as they're published and occasional project updates.</label>
           <input type="email" name="email" id="bd-email" placeholder="Enter your email" />
           <input type="hidden" value="1" name="embed" />
           <input type="submit" value="Subscribe" />
