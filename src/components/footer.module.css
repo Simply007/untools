@@ -2,7 +2,8 @@
     background-color: white;
     font-size: 1.6rem;
     text-align: left;
-    padding: 6rem;
+    padding: 1rem;
+    margin-block-start: 4rem;
     border-top: solid .2rem var(--transparentGrey);
 }
 
@@ -20,35 +21,62 @@
     gap: 4rem;
     max-width: 96rem;
     margin: 0 auto;
-    margin-block-end: 2rem;
+    margin-block-end: 4rem;
 }
 
-.newsletter {
+.block {
+    margin-block-start: 4rem;
+}
+
+.block p {
     text-align: left;
+    line-height: 2.4rem;
 }
 
-.newsletter p {
-    font-size: 1.4rem;
-    opacity: .5;
-}
-
-.newsletter input {
+.block input {
     line-height: 2.4rem;
     padding: 1.2rem;
     border-radius: .8rem;
     border: solid .2rem var(--darkerOverlay);
+}
+
+.block input[type=email] {
     margin-right: 1.6rem;
 }
 
-.newsletter button {
+.block input[type=submit] {
+    border-color: var(--blue);
+    background-color: transparent;
+    color: var(--blue);
     line-height: 2.4rem;
     padding: 1.2rem;
     font-weight: 900;
     border-radius: .8rem;
-
+    cursor: pointer;
 }
 
-.suggestions {
-    text-align: left;
+.block input[type=submit]:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        display: block;
+        padding: 1.6rem;
+        max-width: 96rem;
+        margin: 0 auto;
+        margin-block-start: 0rem;
+        margin-block-end: 2rem;
+    }
+
+    .block {
+        margin-block-start: 4rem;
+    }
+
+    .block form {
+        display: flex;
+        flex: none
+    }
 }
 

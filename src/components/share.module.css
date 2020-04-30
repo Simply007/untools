@@ -79,3 +79,17 @@
     border-color: var(--darkGrey) transparent transparent transparent;
 }
 
+@media only screen and (max-width: 480px) {
+    .share span {
+        font-size: 2rem;
+        font-weight: 900;
+        flex-basis: 100%;
+        align-self: flex-start;
+        margin-left: 0.8rem;
+    }
+
+    .share button {
+        margin: 0.4rem;
+    }
+}
+

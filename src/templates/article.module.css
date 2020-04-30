@@ -52,6 +52,10 @@
     border-color: var(--transparentGrey);
 }
 
+.content h2 {
+    margin-block-start: 4rem;
+}
+
 .content a {
     text-decoration: underline;
 }

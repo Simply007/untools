@@ -24,7 +24,7 @@ const Article = ({ data }) => {
 
     return (
         <Layout displayBackLink="block">
-          <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`}}></div>
+          <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`, borderBottom: `solid 0.2rem var(--transparentGrey)`}}></div>
           <div className={style.container}>
             <div className={style.top}>
                 <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>

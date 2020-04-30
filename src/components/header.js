@@ -4,7 +4,6 @@ import React from "react"
 import style from "./header.module.css"
 
 const Header = ({ siteTitle, displayBackLink }) => {
-  console.log(displayBackLink)
   return (
     <>
     <header className={style.header}>
@@ -14,7 +13,7 @@ const Header = ({ siteTitle, displayBackLink }) => {
             {siteTitle.toLowerCase()}
           </Link>
         </span>
-        <span className={style.backLink}><Link to="/" style={{display: `${displayBackLink}`}}>Back to all tools</Link></span>
+        <span className={style.backLink}><Link to="/" style={{display: `${displayBackLink}`}}>All tools</Link></span>
         <span className={style.about}>
           <Link to="/about/">About</Link>
         </span>
