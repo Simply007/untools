@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Tag from "../components/tag"
 import GalleryItem from "../components/gallery-item"
 import Share from "../components/share"
+import SEO from "../components/seo"
 
 const Article = ({ data }) => {
     const item = data.kontentItemArticle.elements;
