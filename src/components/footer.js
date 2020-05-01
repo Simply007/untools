@@ -1,5 +1,6 @@
 import React from "react"
 import style from "./footer.module.css"
+import { Link } from "gatsby";
 
 class Footer extends React.Component {
   constructor(props){
@@ -36,8 +37,9 @@ class Footer extends React.Component {
         </form>
       </div>
       <div className={style.block}>
-        <h3><span role="img" aria-label="lightbulb">💡 </span>Have a suggestion?</h3>
-        <a href="https://twitter.com/amrancz" target="_blank" rel="noopener noreferrer">Let me know on Twitter!</a>
+        <h3><span role="img" aria-label="info">ℹ️ </span>About Untools</h3>
+        <p>Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems. <br /><Link to="/about">Learn more</Link></p>
+        <p>Do you have feedback or want to suggest a tool? <br /><a href="https://twitter.com/amrancz" target="_blank" rel="noopener noreferrer">Let me know on Twitter!</a></p>
       </div>
       </div>
       <div className={style.container}>

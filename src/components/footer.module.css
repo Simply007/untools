@@ -15,6 +15,10 @@
     text-decoration: none;
 }
 
+.footer p {
+    line-height: 2.4rem;
+}
+
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -63,6 +67,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .footer {
+        margin-block-start: 2rem;
+    }
     .container {
         display: block;
         padding: 1.6rem;
@@ -72,8 +79,12 @@
         margin-block-end: 2rem;
     }
 
-    .block {
+    .block:not(:first-child) {
         margin-block-start: 4rem;
+    }
+
+    .block:first-child {
+        margin-block-start: 2rem;
     }
 
     .block form {

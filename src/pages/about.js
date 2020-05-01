@@ -8,7 +8,7 @@ const About = () => (
     <Layout>
         <SEO title="About" />
         <div className={style.container}>
-            <h2>About Untools</h2>
+            <h1>About Untools</h1>
             <p>
             Untools is a collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.
             </p>
@@ -28,16 +28,16 @@ const About = () => (
                 As a designer, I'm paid for good thinking. I solve problems and make decisions on day-to-day basis.
                 A while ago, I began to look into purposefully improving my thinking. 
                 There are plenty of digital design tools, but they are not enough. 
-                I couldn't find one place that would offer "brain" tools.
+                I couldn't find one place that would offer a good overview of thinking tools.
             </p>
             <p>
                 Eventually, I found plenty of these tools, but scattered around the web.
-                My goal is to build a collection of mental models and frameworks, covering areas like problem solving, systems thinking or decision making.
+                My goal is to build a collection of tools and frameworks, covering areas like problem solving, systems thinking or decision making.
                 I started building it for myself, but I hope it will be useful to many of you.
             </p>
             <p>
                 I'm happy to hear your feedback and any suggestions you might have. I'm always looking to add new tools and improve this resource.
-                <br/>Connect with me on <a href="https://www.twitter.com/amrancz">Twitter</a>.
+                <br/>Connect with me on <a href="https://www.twitter.com/amrancz">Twitter</a> if you have any feedback or a suggestion.
             </p>
         </div>
     </Layout>
