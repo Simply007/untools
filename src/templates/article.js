@@ -44,7 +44,7 @@ const Article = ({ data }) => {
             </div>
             <Share title={item.name.value} category={item.category.value[0].name.toLowerCase()} ></Share>
             <div className={style.similarContainer}>
-                <h2>Similar tools</h2>
+                <h3>More {item.category.value[0].name.toLowerCase()} tools</h3>
                 {similarItems}
             </div>
           </div>
