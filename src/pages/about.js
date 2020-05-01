@@ -16,7 +16,7 @@ const About = () => (
                 <div style={{margin: `0.5rem`}}>
                     <h3>Hi, I'm Adam Amran <span role="img" aria-label="hello-emoji">👋</span></h3>
                     <p>
-                        I'm a product designer from Brno, <span role="img" aria-label="Czechia">🇨🇿</span> and a maker of Untools.
+                        I'm a product designer from Brno <span role="img" aria-label="Czechia">🇨🇿</span>, and a maker of Untools.
                     </p>
                     <p>
                         Let me tell you why I created this little site.

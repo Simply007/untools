@@ -71,6 +71,14 @@ function SEO({ description, lang, meta, title, img }) {
         {
           name: `twitter:image`,
           content: image,
+        },
+        {
+          name: `twitter:site`,
+          content: `@amrancz`,
+        },
+        {
+          name: `twitter:creator`,
+          content: `@amrancz`,
         }
       ].concat(meta)}
     />

@@ -10,7 +10,8 @@ const Header = ({ siteTitle, displayBackLink }) => {
       <div className={style.container}>
         <span className={style.logo}>
           <Link to="/" >
-            {siteTitle.toLowerCase()}
+          {/* <img src="/untools-logo.svg" alt="" width="24px" height="24px"></img> */}
+          <span>{siteTitle.toLowerCase()}</span>
           </Link>
         </span>
         <span className={style.backLink}><Link to="/" style={{display: `${displayBackLink}`}}>All tools</Link></span>

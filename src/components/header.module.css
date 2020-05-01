@@ -20,6 +20,12 @@ a {
     font-weight: 900;
 }
 
+.logo img {
+    display: inline;
+    margin: 0 auto;
+    margin-right: 0.8rem;
+}
+
 .back-link {
     padding: 0.6rem 0rem;
     text-align: center;
