@@ -24,6 +24,7 @@ const Article = ({ data }) => {
 
     return (
         <Layout displayBackLink="block">
+          <SEO title={item.name.value} description={item.when_useful.value}  />
           <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`, borderBottom: `solid 0.2rem var(--transparentGrey)`}}></div>
           <div className={style.container}>
             <div className={style.top}>

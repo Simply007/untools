@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Untools`,
-    description: `Collection of tools for better thinking.`,
+    description: `Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.`,
     author: `Adam Amran, @amrancz`,
   },
   plugins: [
