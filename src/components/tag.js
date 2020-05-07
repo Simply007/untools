@@ -8,5 +8,3 @@ const Tag = ({ categoryStyle, category }) => {
 };
 
 export default Tag
-
-// {node.elements.category.value[0].name.toUpperCase()}

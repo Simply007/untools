@@ -23,6 +23,7 @@ const Article = ({ data }) => {
     )
   });
 
+
   return (
     <Layout displayBackLink="block">
       {item.icon.value[0] && <SEO title={item.name.value} description={item.when_useful.value} img={item.icon.value[0].url} />}
@@ -45,8 +46,8 @@ const Article = ({ data }) => {
           </div>
         </div>
         <Share title={item.name.value} category={item.category.value[0].name.toLowerCase()} ></Share>
+        <h3>More {item.category.value[0].name.toLowerCase()} tools</h3>        
         <div className={style.similarContainer}>
-          <h3>More {item.category.value[0].name.toLowerCase()} tools</h3>
           {similarItems}
         </div>
       </div>

@@ -4,13 +4,17 @@
     padding: 2.4rem;
     background: white;
     box-shadow: 0rem 0.3rem 0.8rem rgba(0, 0, 0, 0.12);
+    border: 1px solid white;
     border-radius: 0.8rem;
     transition-duration: 0.2s;
+    opacity: 0.95;
 }
 
 .item:hover {
-    box-shadow: 0rem 0.3rem 2rem rgba(0, 0, 0, 0.24);
+    box-shadow: 0rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     color: black;
+    opacity: 1;
 }
 
 .item span {

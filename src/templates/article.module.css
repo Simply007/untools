@@ -7,6 +7,10 @@
 
 .similar-container {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    gap: 2.4rem;
+    margin: 0 auto;
+    max-width: 96rem;
 }
 
 .top {
@@ -50,6 +54,11 @@
     width: 100%;
     border: 0.2rem outset;
     border-color: var(--transparentGrey);
+}
+
+.content figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .content h2 {
