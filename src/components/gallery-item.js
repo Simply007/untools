@@ -8,7 +8,7 @@ const GalleryItem = ({data}) => {
   return (
     <Link to={`/${data.elements.url_slug.value}`} key={data.id} className={style.item}>
         <div>
-            <img src={`${data.elements.icon.value[0].url}`} alt=""></img>
+            {data.elements.icon.value[0] && <img src={`${data.elements.icon.value[0].url}`} alt=""></img>}
               <h2>{data.elements.name.value}</h2>
               <Tag categoryStyle={categoryTag} category={data.elements.category.value[0].name.toUpperCase()}></Tag>
             <p>{data.elements.when_useful.value}</p>

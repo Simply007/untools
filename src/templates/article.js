@@ -8,50 +8,50 @@ import Share from "../components/share"
 import SEO from "../components/seo"
 
 const Article = ({ data }) => {
-    const item = data.kontentItemArticle.elements;
-    let categoryTag = item.category.value[0].name.toLowerCase().split(' ').join('-');
+  const item = data.kontentItemArticle.elements;
+  let categoryTag = item.category.value[0].name.toLowerCase().split(' ').join('-');
 
-    const sources = item.sources.value.map(item => {
-        return (
-            <div key={item.id}><a href={`${item.elements.url_link.value}`} target={`blank`} rel={`noopener noreferrer`}>{item.elements.name.value}</a></div>
-        )
-    });
-
-    const similarItems = data.kontentItemArticle.elements.similar_tools.value.map(item => {
-        return (
-          <GalleryItem key={item.id} data={item}></GalleryItem>
-        )
-    });
-
+  const sources = item.sources.value.map(item => {
     return (
-        <Layout displayBackLink="block">
-          <SEO title={item.name.value} description={item.when_useful.value} img={item.icon.value[0].url} />
-          <div style={{backgroundColor:`var(--transparentGrey)`, height: `10rem`, borderBottom: `solid 0.2rem var(--transparentGrey)`}}></div>
-          <div className={style.container}>
-            <div className={style.top}>
-                <img src={`${item.icon.value[0].url}`} alt="" style={{float: `left`, marginRight: `2rem`}}></img>
-                <div style={{margin: `0.5rem`}}>
-                    <h2>{item.name.value}</h2>
-                    <Tag categoryStyle={categoryTag} category={item.category.value[0].name.toUpperCase()}></Tag>
-                    <div className={style.whenUseful}>{item.when_useful.value}</div>
-                </div>
-            </div>
-            <div className={style.content}>
-              <div dangerouslySetInnerHTML={{ __html:item.content.value}}>
-              </div>
-              <div className={style.sources}>
-                  <h3>Sources</h3>
-                  {sources}
-              </div>
-            </div>
-            <Share title={item.name.value} category={item.category.value[0].name.toLowerCase()} ></Share>
-            <div className={style.similarContainer}>
-                <h3>More {item.category.value[0].name.toLowerCase()} tools</h3>
-                {similarItems}
-            </div>
-          </div>
-        </Layout>
+      <div key={item.id}><a href={`${item.elements.url_link.value}`} target={`blank`} rel={`noopener noreferrer`}>{item.elements.name.value}</a></div>
     )
+  });
+
+  const similarItems = data.kontentItemArticle.elements.similar_tools.value.map(item => {
+    return (
+      <GalleryItem key={item.id} data={item}></GalleryItem>
+    )
+  });
+
+  return (
+    <Layout displayBackLink="block">
+      {item.icon.value[0] && <SEO title={item.name.value} description={item.when_useful.value} img={item.icon.value[0].url} />}
+      <div style={{ backgroundColor: `var(--transparentGrey)`, height: `10rem`, borderBottom: `solid 0.2rem var(--transparentGrey)` }}></div>
+      <div className={style.container}>
+        <div className={style.top}>
+          {item.icon.value[0] && <img src={`${item.icon.value[0].url}`} alt="" style={{ float: `left`, marginRight: `2rem` }}></img>}
+          <div style={{ margin: `0.5rem` }}>
+            <h2>{item.name.value}</h2>
+            <Tag categoryStyle={categoryTag} category={item.category.value[0].name.toUpperCase()}></Tag>
+            <div className={style.whenUseful}>{item.when_useful.value}</div>
+          </div>
+        </div>
+        <div className={style.content}>
+          <div dangerouslySetInnerHTML={{ __html: item.content.value }}>
+          </div>
+          <div className={style.sources}>
+            <h3>Sources</h3>
+            {sources}
+          </div>
+        </div>
+        <Share title={item.name.value} category={item.category.value[0].name.toLowerCase()} ></Share>
+        <div className={style.similarContainer}>
+          <h3>More {item.category.value[0].name.toLowerCase()} tools</h3>
+          {similarItems}
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
 export default Article
