@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Adam Amran @amrancz",
   "dependencies": {
-    "@kentico/gatsby-source-kontent": "^4.4.0",
+    "@kentico/gatsby-source-kontent": "6.0.0-vnext.5",
     "feather-icons": "^4.28.0",
     "gatsby": "^2.20.31",
     "gatsby-image": "^2.3.1",

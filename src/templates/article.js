@@ -11,13 +11,13 @@ const Article = ({ data }) => {
     const item = data.kontentItemArticle.elements;
     let categoryTag = item.category.value[0].name.toLowerCase().split(' ').join('-');
 
-    const sources = item.sources.linked_items.map(item => {
+    const sources = item.sources.value.map(item => {
         return (
             <div key={item.id}><a href={`${item.elements.url_link.value}`} target={`blank`} rel={`noopener noreferrer`}>{item.elements.name.value}</a></div>
         )
     });
 
-    const similarItems = data.kontentItemArticle.elements.similar_tools.linked_items.map(item => {
+    const similarItems = data.kontentItemArticle.elements.similar_tools.value.map(item => {
         return (
           <GalleryItem key={item.id} data={item}></GalleryItem>
         )
@@ -58,77 +58,76 @@ export default Article
 
 export const query = graphql`
 query articleQuery($slug: String!) {
-    kontentItemArticle(elements: {url_slug: {value: {eq: $slug}}})
-        {
-        elements {
-            url_slug {
-              value
+  kontentItemArticle(elements: {url_slug: {value: {eq: $slug}}}) {
+    elements {
+      url_slug {
+        value
+      }
+      name {
+        value
+      }
+      content {
+        value
+      }
+      when_useful {
+        value
+      }
+      icon {
+        value {
+          url
+        }
+      }
+      category {
+        value {
+          name
+        }
+      }
+      sources {
+        value {
+          ... on kontent_item_source {
+            id
+            elements {
+              name {
+                value
+              }
+              url_link {
+                value
+              }
             }
-            name {
-              value
-            }
-            content {
-              value
-            }
-            when_useful {
-                value 
-            }
-            icon {
+          }
+        }
+      }
+      similar_tools {
+        value {
+          id
+          ... on kontent_item_article {
+            id
+            elements {
+              name {
+                value
+              }
+              icon {
                 value {
                   url
                 }
               }
-            category {
-              value {
-                name
+              when_useful {
+                value
+              }
+              category {
+                value {
+                  name
+                }
+              }
+              url_slug {
+                value
               }
             }
-            sources {
-                linked_items {
-                  ... on KontentItemSource {
-                    id
-                    elements {
-                      name {
-                        value
-                      }
-                      url_link {
-                        value
-                      }
-                    }
-                  }
-                }
-              }
-              similar_tools {
-                linked_items {
-                  id
-                  ... on KontentItemArticle {
-                    id
-                    elements {
-                      name {
-                        value
-                      }
-                      icon {
-                        value {
-                          url
-                        }
-                      }
-                      when_useful {
-                        value
-                      }
-                      category {
-                        value {
-                          name
-                        }
-                      }
-                      url_slug {
-                        value
-                      }
-                    }
-                  }
-                }
-                name
-              }
           }
+        }
+        name
+      }
     }
   }
+}
 `

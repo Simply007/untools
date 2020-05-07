@@ -10,8 +10,8 @@ import Categories from "../components/categories"
 const Category = ({data, pageContext}) => { 
 
   function orderItems(a, b) {
-    const first = a.props.data.system.lastModified;
-    const second = b.props.data.system.lastModified;
+    const first = a.props.data.system.last_modified;
+    const second = b.props.data.system.last_modified;
     return first > second ? -1 : (first < second ? 1 : 0)
   }
 
@@ -79,7 +79,7 @@ export const query = graphql`
         }
         id
         system {
-          lastModified
+          last_modified
         }
       }
     }
