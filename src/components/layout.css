@@ -2,11 +2,19 @@
   --transparentGrey:  hsla(204, 4%, 36%, 0.05);
   --darkerOverlay:  hsla(204, 4%, 36%, 0.15);
   --creamWhite: hsla(40, 50%, 99%, 1);
-  --darkGrey: #0a171c;
-  --purple: #9B51E0;
-  --green: #0B843E;
-  --blue: #2779A7;
+  --darkGrey: rgb(10, 23, 28);
+  --purple: rgb(155, 81, 224);
+  --transparentPurple: rgba(155, 81, 224, 0.1);
+  --green: rgb(11, 132, 62);
+  --transparentGreen: rgba(11, 132, 62, 0.1);
+  --blue: rgb(39, 121, 167);
+  --transparentBlue:rgba(39, 121, 167, 0.1);
   font-size: 10px;
+}
+
+::selection {
+  color: white;
+  background: var(--darkGrey);
 }
 
 html {
@@ -50,6 +58,18 @@ h3 {
   font-weight: 900;
 }
 
+table, th, td {
+  border: 1px solid var(--darkerOverlay);
+  border-collapse: collapse;
+  font-size: 1.6rem;
+}
+
+td {
+  padding: 1rem;
+}
+
+
+
 /* Define tags and their colorurs */
 
 .all {
@@ -73,7 +93,7 @@ h3 {
   border-color: var(--purple);
   border-width: 0.2rem;
   color: var(--purple);
-
+  background-color: var(--transparentPurple);
 }
 
 
@@ -91,6 +111,8 @@ h3 {
   border-color: var(--green);
   border-width: 0.2rem;
   color: var(--green);
+  background-color: var(--transparentGreen);
+
 }
 
 .problem-solving:hover {
@@ -107,6 +129,7 @@ h3 {
   border-color: var(--blue);
   border-width: 0.2rem;
   color: var(--blue);
+  background-color: var(--transparentBlue);
 }
 
 .decision-making:hover{
